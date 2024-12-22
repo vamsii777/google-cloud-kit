@@ -48,6 +48,10 @@ let package = Package(
             name: "GoogleCloudPubSub",
             targets: ["PubSub"]
         ),
+        .library(
+            name: "GoogleCloudIdentityToolkit",
+            targets: ["IdentityToolkit"]
+        ),
     ],
     dependencies: [
         .package(url: "https://github.com/swift-server/async-http-client.git", from: "1.18.0"),
@@ -103,6 +107,13 @@ let package = Package(
                 .target(name: "Core")
             ],
             path: "PubSub/Sources/"
+        ),
+        .target(
+            name: "IdentityToolkit",
+            dependencies: [
+                .target(name: "Core")
+            ],
+            path: "IdentityToolkit/Sources"
         ),
         .testTarget(
             name: "CoreTests",
