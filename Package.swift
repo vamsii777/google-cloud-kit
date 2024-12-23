@@ -18,6 +18,7 @@ let package = Package(
                 "PubSub",
                 "SecretManager",
                 "Storage",
+                "IdentityToolkit"
             ]
         ),
         .library(
