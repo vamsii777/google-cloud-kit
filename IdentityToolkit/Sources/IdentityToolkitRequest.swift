@@ -13,7 +13,7 @@ class GoogleCloudIdentityToolkitRequest: GoogleCloudAPIRequest {
     let responseDecoder: JSONDecoder = JSONDecoder()
     var currentToken: OAuthAccessToken?
     var tokenCreatedTime: Date?
-    let eventLoop: EventLoop
+    var eventLoop: EventLoop
     
     init(httpClient: HTTPClient, eventLoop: EventLoop, oauth: OAuthRefreshable, project: String, apiKey: String) {
         self.refreshableToken = oauth

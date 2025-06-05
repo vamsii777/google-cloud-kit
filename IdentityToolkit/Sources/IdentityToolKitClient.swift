@@ -56,4 +56,9 @@ public final class GoogleCloudIdentityToolkitClient {
         
         account = GoogleCloudIdentityToolkitAccountsAPI(request: identityToolkitRequest, endpoint: base)
     }
+
+    public func hopped(to eventLoop: EventLoop) -> GoogleCloudIdentityToolkitClient {
+        identityToolkitRequest.eventLoop = eventLoop
+        return self
+    }
 }
