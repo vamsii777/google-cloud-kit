@@ -67,6 +67,7 @@ public struct IdentityToolkitAPIErrorBody: Codable {
         
         // Standard Google Cloud API Errors
         case invalidArgument = "INVALID_ARGUMENT"
+        case billingNotEnabled = "BILLING_NOT_ENABLED"
         case failedPrecondition = "FAILED_PRECONDITION"
         case outOfRange = "OUT_OF_RANGE"
         case unauthenticated = "UNAUTHENTICATED"
